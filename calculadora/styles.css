@@ -1,0 +1,99 @@
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        :root {
+            --primary-color: #084026;
+            --secondary-color: #083E40;
+            --terceary-color: #082240;
+            --bg: #010A12;
+            --text-color: #fff;
+            --operadores-color: #6B0606;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        #calculator {
+            background-color: var(--terceary-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            height: 500px;
+        }
+
+        #display-container {
+            margin-bottom: 20px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            width: 100%;
+            height: 90px;
+        }
+
+        #display {
+            width: 100%;
+            height: 100%;
+            font-size: 2em;
+            text-align: right;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #083E40;
+            color: #fff;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: #0DDBB2;
+            width: 22%;
+            height: 60px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .operator {
+            background-color: var(--operadores-color);
+        }
+
+        .operator:hover {
+            background-color: #8B0000;
+        }
+
+        .clear {
+            background-color: #3F0778;
+            width: 100%;
+        }
+
+        .clear:hover {
+            background-color: #5A0B9B;
+        }
