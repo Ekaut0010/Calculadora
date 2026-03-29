@@ -4,24 +4,66 @@
             margin: 0;
         }
 
+        /* Variáveis de cores para temas claro e escuro */
         :root {
             --primary-color: #084026;
-            --secondary-color: #083E40;
-            --terceary-color: #082240;
-            --bg: #010A12;
-            --text-color: #fff;
-            --operadores-color: #6B0606;
+            --secondary-color: #0a6e73;
+            --tertiary-color: #cce3f2;
+
+            --bg: #f5f7fa;
+            --text-color: #111;
+
+            --button-bg: #ffffff;
+            --button-text: #000;
+
+            --operadores-color: #ff9500;
         }
 
+        .dark {
+            --primary-color: #084026;
+            --secondary-color: #083E40;
+            --tertiary-color: #082240;
+
+            --bg: #010A12;
+            --text-color: #fff;
+
+            --button-bg: #1e1e1e;
+            --button-text: #fff;
+
+            --operadores-color: #ff9500;
+        }
 
         body {
             font-family: Arial, sans-serif;
             background-color: var(--bg);
+            color: var(--text-color);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
+            transition: background 0.3s, color 0.3s;
+
+        }
+
+        #toggle-theme {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: 1px solid var(--text-color);
+            border-radius: 5px;
+            padding: 5px 10px;
+            width: 50px;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: var(--text-color);
+
+        }
+
+        #toggle-theme:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
         }
 
         h1 {
@@ -33,7 +75,7 @@
             background-color: var(--terceary-color);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
             width: 400px;
             height: 500px;
         }
@@ -66,8 +108,8 @@
         }
 
         button {
-            background-color: var(--primary-color);
-            color: #0DDBB2;
+            background-color: var(--button-bg);
+            color: var(--button-text);
             width: 22%;
             height: 60px;
             font-size: 1.5em;
@@ -81,8 +123,18 @@
             background-color: var(--secondary-color);
         }
 
+        button:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
         .operator {
             background-color: var(--operadores-color);
+            color: #fff;
         }
 
         .operator:hover {
@@ -90,7 +142,7 @@
         }
 
         .clear {
-            background-color: #3F0778;
+            background-color: var(--tertiary-color);
             width: 100%;
         }
 

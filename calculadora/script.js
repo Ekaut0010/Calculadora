@@ -1,5 +1,5 @@
 const display = document.getElementById("display");
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll("button:not(#toggle-theme)");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -39,5 +39,19 @@ document.getElementById("btnIgual").addEventListener("click", () => {
     setTimeout(() => {
       display.value = "";
     }, 1500);
+  }
+});
+
+// Alternar tema claro/escuro
+const toggle = document.getElementById("toggle-theme");
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+toggle.addEventListener("click", () => {
+  if (document.body.classList.contains("dark")) {
+    toggle.textContent = "☀️";
+  } else {
+    toggle.textContent = "🌙";
   }
 });
