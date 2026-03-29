@@ -21,7 +21,7 @@ Uma calculadora simples feita com HTML, CSS e JavaScript, com suporte a tema cla
 
 ## 🔗 Acesse o projeto
 
-(em breve)
+https://ekaut0010.github.io/Calculadora/
 
 ## 💡 Próximas melhorias (v2)
 
